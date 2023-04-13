@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Magic 8 Ball</title>
+      <style>
+
+        body{
+          display:grid;
+          justify-content: center;
+          align-items: center;
+          height: 500px;
+          overflow: hidden;
+          background-color: rgb(65,0,109);
+        }
+
+        .eightball {
+          width:300px;
+          height:300px;
+          background-color: black;
+          border-radius: 50%;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .inputfield {
+          display:flex;
+          justify-content: center;
+          border-radius: 200px;
+          font-size:16px;
+          padding: 25px 50px 15px 15px;
+           
+        }
+
+        .input {
+          position:absolute;
+          top: 500px;
+          padding: 50px 80px 25px 25px;
+          font-size: 16px;
+          border-radius: 300px;
+          text-align: left;
+          border: 0;
+        }
+
+        .corner {
+          position:absolute;
+          width:0;
+          height:0;
+          top:125px;
+          left:730px;
+          border-top: 150px solid #0000aa;
+          border-bottom: 150px solid transparent;
+          transform:rotate(45deg);
+          border-right:150px solid transparent;
+        }
+
+        .corner span {
+          position:absolute;
+          top:-100px;
+          width:100px;
+          left:5px;
+          text-align: center;
+          font-size: 16;
+          font-family: arial;
+          transform: rotate(-45deg);
+          display:block;
+          color:white;
+
+        }
+
+        .shake {
+          animation-name: shake;
+          animation-iteration-count: 32;
+          animation-duration: 20ms;
+        }
+
+
+        @keyframes shake{
+          0%{top: 100px; left: 10px;}
+          20%{top: -50px; left:0px;}
+          75%{top: 50px; left: 10px;}
+          100%{top:-10px; left:-10px;}
+        }
+
+      </style>
+  </head>
+  <body>
+
+    <script>
+      var fortunes = [
+        "It is certain",
+        "Yes",
+        "Not likely",
+        "Don't count on it",
+        "Reply hazy, try again",
+        "No",
+        "Outlook not so good",
+        "Very doubtful"
+      ];
+      
+      var curFortune= 0;
+      
+      
+      function shake() {
+        var magicBall = document.querySelector(".eightball");
+        console.log(magicBall);
+        magicBall.classList.remove("shake");
+        void magicBall.offsetWidth;
+        magicBall.classList.add("shake");
+        void magicBall.offsetWidth;
+
+       curFortune= Math.floor(Math.random() * fortunes.length);
+       setTimeout(() => {
+        var element= document.getElementById("fortunes");
+        element.childNodes[0].nodeValue = fortunes[curFortune];}, 500); 
+      }
+
+      
+    
+      
+    </script>
+
+    
+    <div class="eightball">
+      <div class="corner"><span id="fortunes">Try Again</span></div>
+    </div>
+    <div class="inputfield">
+        <input type="text" id="clear" placeholder="Ask me anything">
+    </div>
+    <button onclick="shake">Shake</button>
+  </body>
+</html>
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan Calculator</title>
+</head>
+<body>
+    <style>
+      label{
+        display:block
+      } 
+    </style>
+<!--Query or prompt user for a 
+loan amount
+interest rate
+payment amount
+print table of the loan balance after each payment
+after payment is subtracted add the interest amount to loan before next payment
+month interest is annual interest divided by 12
+when remaining balance is less than payment,print the remaining balance as the last payment
+close the table
+print the number of payments necessary and the total interest paid
+if amount if interest is GREATER than payment amount print warning and quit-->
+  <script src="calculate.js">
+  </script>
+  
+  <table>
+    <tr>
+      <th>Loan Information</th>
+      <tr>
+        
+        <td>Principle:</td>
+        <td><input type="text" name="principle" size="12"
+          onchange="calculateLoan();"></td>
+      </tr>
+
+      <tr>
+        
+        <td>Interest Rate:</td>
+        <td><input type="text" name="interest" size="12"
+        onchange="calculateLoan();"> </td>
+      </tr>
+
+      
+      <td>Repayment in years:</td>
+      <td><input type="text" name="years" size="12"
+      onchange="calculateLoan();"> </td>
+
+      <tr>
+        <td colspan="3">
+          <input type="button" value="Calculate" onclick="calculateLoan();">
+        </td>
+      </tr>
+
+      <tr>
+        <td>Monthly Payment:</td>
+        <td><input type="text" name="payment" size="12"></td>
+      </tr>
+
+      <tr>
+        <td>Total Payment:</td>
+        <td><input type="text" name="total" size="12"> </td>
+      </tr>
+
+      <tr>
+        <td> Total Interest:</td>
+        <td><input type="text" name="totalInterest" size="12"> </td>
+      </tr>
+      
+      <tr>
+      <td>Loan Balance:</td>
+      <td><input type="text" name="loanBalance" size="12"></td>
+      </tr>
+
+  </table>
+  <!--<div id="loan_info">Loan Info</div>
+
+  <form action="#"> 
+   <div class="input">
+          
+      <label for="principle"> Principle Balance</label>
+      <input id="principle" type="number" required>
+    
+     
+      <label for="interestRate">Interest Rate %</label> 
+      <input id="interestRate" type="number" required>
+
+    
+      <label for="paymentAmount">Payment Amount</label>
+      <input id= "payment" type="number" required>  
+
+      
+  </div>
+
+  <div class="result">
+    <label for="remainingBalance">Remaining Balance</label>
+      <input id="balance" type="number">
+  </div>
+
+  </form>
+<button onclick="calculateLoan()">Calculate</button>-->  
+
+</body>
+</html>

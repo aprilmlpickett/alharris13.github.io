@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      label{
+        display:block;
+      }
+      
+    </style>
+  </head>
+  <body>
+           <!--<form action="#" method="get" id="contactForm">
+        <div>
+          <label for="name">First Name</label>
+          <input type="text" name="firstname" id="firstname" placeholder="first name" required>
+        </div>
+        <div>
+          <label for="name">Last Name</label>
+          <input type="text" name="lastname" id="lastname" placeholder="last name" required>
+        </div>
+        <button onclick="makeEmail()">Make Email</button>
+      </form> 
+        ASSIGNMENT: create a JavaScript function that gets the value from the form inputs and creates an email address using the first letter of the first name, a period, and the last name, and adds @waketech.edu to it and alerts it. Hint: document.getElementById (your ids here).value. Hint: strings have a method called charAt(index), with 0 being the first letter. ex: let myLetter = myString.charAt(0)create a button that calls your function onclick=-->
+    <form>  
+      
+      <script>
+        function makeEmail(){
+          
+          var firstName=document.getElementById("firstName").value,
+              lastName=document.getElementById("lastName").value;
+        
+          var firstLetter= firstName.charAt(0);
+          
+          var email=firstLetter + "." + lastName + "@waketech.edu";
+
+        
+          alert(email);   
+        }
+        
+        //function validateForm(){
+          //check for: 
+          //non-letters
+          //check for duplicate email - this is complicated 
+          //maximum length
+          //minimum length
+          //hint= somestring.length--try to do maximum and minimum length
+         //var stringLength=document.getElementById(firstName).value;
+         //if(fieldLength <=2){ return true;}
+         //var stringLength= document.getElementById(lastName).value
+        // if(fieldLength >20) {return true;}
+        //
+
+        function validateForm()
+        {
+          //get values from form
+          var firstName = document.getElementById("firstName").value,
+          lastName=document.getElementById("lastName").value,
+          bIsValid = true; //boolean is valid//
+
+          if(bIsValid && (firstName !="") && (lastName !="") && (lastName.length <12)) 
+          {
+            bIsValid = true;
+          }
+          else{
+            bIsValid = false;
+            alert("Invalid First or Last Name");
+          }
+          
+          if(bIsValid)
+          {
+            makeEmail();
+          }
+        }
+          
+        function spellName()
+        {
+            var firstName = document.getElementById("firstName").value,
+            lastName = document.getElementById("lastName").value;
+
+              for (var count = 0; count < firstName.length; count++)
+              {
+                alert( firstName.charAt(count));
+              }
+              var count = 0;
+              while( count < lastName.length )
+              {
+                alert (lastName.charAt(count++));;
+              }
+        }
+
+
+
+        
+
+      </script>
+
+        <label for="firstName">First Name</label>
+        <input  id="firstName">
+     
+     
+        <label for="lastName">Last Name</label>
+        <input id="lastName">
+          
+       <button onclick="validateForm()">Make Email</button> <!--this is changed from button onclick makeEmail for an example.
+        Be sure to review Booleans === and <> and ==. Also review parenthesis and grouping. Going left to right to evaluate these strings.
+        <button onclick="validateForm()">Make Email</button>-->
+       <button onclick="spellName()"> Spell Name</button>
+
+    </form>
+    
+  </body>
+</html>

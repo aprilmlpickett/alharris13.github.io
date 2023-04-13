@@ -1,0 +1,137 @@
+      body{
+        background-color:rgba(255, 241, 224, 0.393);
+      }
+      
+      main {
+        display:flex;
+        flex-direction: row;
+      }
+
+      main > *{
+        padding: 5%;
+        padding-top: 0%;
+      }
+          
+      header {
+        background-color: #fbcfc149;
+        padding-top:5px;
+        padding-bottom:5px;
+      }
+      
+      aside {
+        background-color: #ffead819;
+        padding-left: 18px;
+        padding-right: 10px;
+      }
+
+      ul li {
+        list-style-position: inside;
+      }
+
+      .name {
+        font-family: tangerine;
+        font-size: 80px;
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      .credentials {
+        font-family: tangerine;
+        font-weight: bold;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 0;
+      }
+
+      .degree {
+        font-family: Bona nova;
+        font-size: 18px;
+        margin-bottom:0%;
+      }
+
+      .school-address, .location {
+        font-family: Vidaloka;
+        font-size: 13px;
+        font-style: italic;
+        margin-top: 0%;
+      }
+
+      .contact {
+        font-family: Bona nova;
+        font-size: 16px;
+        margin-bottom: 0%;
+      }
+
+      .heading {
+        font-family: Vidaloka;
+        font-size: 23px;
+        text-align: left;
+        padding-top: 0%;
+        margin-top: 1%
+     }
+
+      .heading-education {
+        font-family: Vidaloka;
+        font-size: 23px;
+        text-align: center;
+        margin-top: 15%;
+      }
+
+      .heading-skills {
+        font-family: Vidaloka;
+        font-size: 23px;
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 8%;
+        padding-top: 15%;
+      }
+
+      .job-title {
+        font-family: Bona nova;
+        font-size: 19px;
+        font-weight: bold;
+        margin-bottom: 0%;
+      }
+
+      .facility {
+        font-family: Bona nova;
+        font-size: 16px;
+        margin-bottom: 0%;
+        margin-top: 0%;
+      }
+
+      .work-date {
+        font-family: Bona nova;
+        font-size: 14px;
+        margin-bottom: 2%;
+        margin-top: 0%;
+      }
+
+      .duties {
+        font-family: Bona nova;
+        font-size: 15px;
+      }
+
+      .work-skills {
+        list-style-type: square;
+        font-family: Bona nova;
+        font-size:15px;
+        margin-bottom: 5%; 
+      }
+
+      .statement {
+        font-family: Bona nova;
+        font-size: 20px;
+        margin-bottom: 5%;
+      }
+
+      .skills { 
+        font-family: Bona nova;
+        font-size: 15px;
+        list-style-type: none;
+        padding-top: 10%;
+      }
+
+      
+
+
